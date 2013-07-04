@@ -1,0 +1,19 @@
+body {
+    margin-top: 3em;
+}
+
+#path {
+    width: 100%;
+}
+
+.pathSuggest {
+    position: absolute;
+    z-index: 1;
+    color: #888;
+}
+
+.pathInput {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
