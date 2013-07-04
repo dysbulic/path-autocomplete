@@ -76,9 +76,6 @@ function sharedStart(A) {
 
     s = tem1.length;
 
-    console.log(tem1);
-    console.log(tem2);
-
     while (s > 0) {
         var m = tem1.substring(0, s);
         var re = new RegExp("^" + m + ".*", "i");
@@ -93,10 +90,9 @@ function sharedStart(A) {
 }
 
 function acBindKey(event) {
-    console.log( 'keyPress' )
     if (event.keyCode === $.ui.keyCode.TAB) {
     // get suggestion
-        var sugg = $(this).siblings(".pathSuggest").val();
+        var sugg = $(this).siblings(".path.suggest").val();
 
     // accept current suggestion
         $(this).val(sugg);
@@ -135,7 +131,7 @@ function acSource(request, response) {
     if (avail.length == 1) path.push("");
 
   // set suggestion for autocomplete
-    var sugg = $(this.element).siblings(".pathSuggest");
+    var sugg = $(this.element).siblings(".path.suggest");
     $(sugg).val(path.join("/"));
 
   // delegate back to autocomplete, but extract the last term
@@ -156,7 +152,7 @@ function acSelect(event, ui) {
     this.value = terms.join("/");
 
   // update suggestion
-    $(this).siblings(".pathSuggest").val(this.value);
+    $(this).siblings(".path.suggest").val(this.value);
 
     return false;
 }
@@ -179,7 +175,6 @@ var acPathOptions = {
 }
 
 function initPathAC(what) {
-    console.log( what )
     $(what)
         .bind("keydown", acBindKey)
         .bind("focus", acSearch)
