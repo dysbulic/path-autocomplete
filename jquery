@@ -9,7 +9,7 @@ $( function() {
                 "current": ""
             }
         },
-        "b": {
+        "c": {
             "1": {
                 "n": "",
                 "previous": "",
@@ -52,6 +52,5 @@ $( function() {
         }
     }
     
-    // $("#path").pathAutocomplete( paths )
-    initPathAC( $(".path.input") )
+    $(".path.input").pathAutocomplete( paths )
 } )
