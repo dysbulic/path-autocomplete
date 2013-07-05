@@ -30,6 +30,10 @@ Finally, include [jquery.path-autocomplete.js](//wholcomb.github.io/path-autocom
       /* Object to autocomplete from */
     } )
 
+## Sample
+
+Browse a tree of science fiction award winners at [wholcomb.github.io/path-autocomplete/](//wholcomb.github.io/path-autocomplete/).
+
 ## Source
 
 Originally from [Vanista](http://stackoverflow.com/questions/14144970/jquery-autocomplete-path-bash-style#answer-14245999)
