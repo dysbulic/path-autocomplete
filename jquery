@@ -1,56 +1,7 @@
 $( function() {
-    var paths = {
-        "a": {
-            "1": {
-                "m": "",
-                "n": "",
-                "o": "",
-                "previous": "",
-                "current": ""
-            }
-        },
-        "c": {
-            "1": {
-                "n": "",
-                "previous": "",
-                "current": ""
-            },
-            "2": {
-                "m": "",
-                "n": "",
-                "o": "",
-                "previous": "",
-                "current": ""
-            }
-        },
-        "somedir-x": {
-            "3": {
-                "nothing-m": "",
-                "nothing-n": "",
-                "nothing-o": "",
-                "previous": "",
-                "current": ""
-            }
-        },
-        "somedir-y": {
-            "next-1": {
-                "other-n": "",
-                "previous": "",
-                "current": ""
-            },
-            "next-2": {
-                "other-m": "",
-                "other-o": "",
-                "previous": "",
-                "current": ""
-            },
-            "next-3": {
-                "other-o": "",
-                "previous": "",
-                "current": ""
-            }
-        }
-    }
-    
-    $(".path.input").pathAutocomplete( paths )
+    var awards = {}
+    loadAward( 'Hugo', 'book', '/en/hugo_award', awards )
+    loadAward( 'Nebula', 'book', '/en/nebula_award', awards )
+
+    $(".path.input").pathAutocomplete( awards )
 } )
